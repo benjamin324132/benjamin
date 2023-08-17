@@ -9,7 +9,7 @@ const Skills = () => {
       </h2>
       <div className="flex flex-wrap gap-2 md:gap-4 mt-10">
         {skills.map((skill) => (
-          <div className=" px-2 py-1 md:px-4 md:py-2 bg-black rounded-lg">
+          <div key={skill} className=" px-2 py-1 md:px-4 md:py-2 bg-black rounded-lg">
             <span className="text-white whitespace-nowrap">{skill}</span>
           </div>
         ))}
