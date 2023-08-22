@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   const body = await request.json();
 
   try {
-    const { email, message } = await contactSchema.parse(body);
+    const { email, message } = contactSchema.parse(body);
     
     const data = await resend.emails.send({
       from: "Contact <onboarding@resend.dev>",
